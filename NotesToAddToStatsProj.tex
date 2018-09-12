@@ -1,0 +1,39 @@
+
+% Uncomment the appropriate line
+%\Scribe{Your name}
+
+\Scribes{Matt Troglia}
+\LectureDate{Sept}
+\LectureTitle{Notes Statistics }
+
+%\usepackage[mathcal]{euscript}
+
+%task 1 (talk about any linear combination, iid)
+
+\MakeScribeTop
+
+if $\sum a_i x_i$ is gaussian $\forall a_i \in R$ then $x_i$ is gaussian $(a_i =1 a_j =0 \; j \neq i) $
+
+Let $X_i \sim N(0,1)$
+$W \sim B(1/2)$
+
+  \begin{equation}
+    x_2=
+    \begin{cases}
+      x_1, & \ W=1 \\
+      -x_1, & \ W=0 \\
+    \end{cases}
+  \end{equation}
+
+Show that $x_2 \sim N(0,1) but X-1 and x_2 are not jointly gaussian X_1 + x_2$
+
+
+$x_1... X_n  \sim N(0,1)$
+
+$\sum x_i^2 = \sum(x_i-\bar{x})+ n \bar{x}^2$
+
+Note $\bar{x} = 1/n \sum_j x_j$ is the empirical mean
+
+RHS is empirical variance + empirical mean
+
+show that $\sum x_i - \bar{x}=row(x_1...x_n)Matrix(A_1)col(x_1...x_n)$

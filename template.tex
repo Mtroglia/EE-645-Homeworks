@@ -1,0 +1,90 @@
+\documentclass[11pt]{article}
+\usepackage{scribe}
+
+% Uncomment the appropriate line
+%\Scribe{Your name}
+
+\Scribes{Fill in your name}
+\LectureDate{Date here}
+\LectureTitle{Title here}
+
+%\usepackage[mathcal]{euscript}
+
+
+\begin{document}
+
+\MakeScribeTop
+
+Content here
+\paragraph{This is a paragraph heading} Paragraph.
+
+\section{This is a numbered section}
+Section
+\subsection*{This is an unnumbered subsection}
+
+\bTheorem
+This is a theorem.
+\eTheorem
+
+\bLemma
+This is a lemma.
+\Proof 
+The proof comes here. 
+If any lemma/theorem/corollary/example ends in an equation,
+the closing box comes in the equation line like this
+\[
+\alpha+\beta=\gamma.\eqed
+\]
+\eLemmap
+Do not stagger the box to be in a separate line as below.
+\bLemma
+This is a lemma.
+\Proof 
+The proof comes here. 
+\[
+\alpha+\beta=\gamma.
+\]
+\eLemma
+
+\bCorollary
+A corollary.
+\eCorollary
+
+\bExample
+An example.
+\eExample
+'
+Take a look at the \verb+scribe.sty+ file. It has several
+useful definitions, such as script letters ($\cA$, $\cB$, $\ldots$);
+stacked symbols like $\aeq{(a)}$, $\age{(b)}$, and so on. If you use
+new definitions and macros, include it in \emph{your} source file,
+and not in \verb+scribe.sty+ to prevent confusion. 
+
+Here is an example of using all these environments.
+\bTheorem Suppose $x_1\upto x_n$ and $y_1\upto y_n$ are sequences of positive numbers
+both ordered in ascending or both in descending order. Then
+\[
+\frac{(x_1+\ldots+x_n)}n
+\frac{(y_1+\ldots+y_n)}n
+\le 
+\frac{(x_1y_1+\ldots+x_ny_n)}n.
+\]
+\Proof
+Start by writing
+\begin{align*}
+(x_1+\ldots+x_n)(y_1+\ldots+y_n)
+&= \sum_{k=0}^{n-1} \sum_{i=1}^n x_i y_{((i+k)\!\!\!\!\mod n)}\\
+&\le n\sum_{i=1}^n x_i y_i
+\end{align*}
+The last equality above follows since for all $k$ 
+\[
+\sum_{i=1}^n x_i y_{((i+k)\!\!\!\!\mod n)} \le \sum_{i=1}^n x_i y_{i} 
+\]
+because both ${x_i}$ and ${y_i}$ are both arranged in ascending (or both in descending) order.
+\eTheorem
+
+
+To compile, please use \verb+pdflatex+. 
+
+
+\end{document}
